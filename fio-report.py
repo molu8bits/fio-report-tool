@@ -151,7 +151,8 @@ ax4.legend([lr2, lw3, la1],labeltab, loc="lower right")
 fullPath, filename = os.path.split(inputFileName)
 baseFilename = os.path.splitext(filename)[0]
 fileFormat = '.png'
-imgFilename = os.path.join(fullPath, baseFilename +fileFormat)
+baseFilename = baseFilename + '_' + blockSize
+imgFilename = os.path.join(fullPath, baseFilename + fileFormat)
 
 
 extent = ax4.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
